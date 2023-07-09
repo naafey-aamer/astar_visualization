@@ -35,8 +35,8 @@ class Node:
         self.is_obstacle = False
         self.is_start = False
         self.is_goal = False
-        self.parent = None  # Added parent attribute
-
+        self.parent = None  
+        
     def add_neighbor(self, neighbor):
         self.neighbors.append(neighbor)
 
@@ -162,7 +162,7 @@ def main():
                 pygame.quit()
                 return
             elif event.type == pygame.MOUSEBUTTONDOWN:
-                if pygame.mouse.get_pressed()[0]:  # Left mou   se button
+                if pygame.mouse.get_pressed()[0]: 
                     mouse_pos = pygame.mouse.get_pos()
                     col = mouse_pos[0] // GRID_SIZE
                     row = mouse_pos[1] // GRID_SIZE
